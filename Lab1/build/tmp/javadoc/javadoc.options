@@ -1,0 +1,7 @@
+-classpath '/Users/shengnanyou/IdeaProjects/Lab1/build/classes/java/main:/Users/shengnanyou/IdeaProjects/Lab1/build/resources/main'
+-d '/Users/shengnanyou/IdeaProjects/Lab1/build/docs/javadoc'
+-doctitle 'Lab1 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'Lab1 1.0-SNAPSHOT API'
+'/Users/shengnanyou/IdeaProjects/Lab1/src/main/java/Author.java'
