@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/shengnanyou/IdeaProjects/Lab3/src/main/java/Assignment2</OriginalElement>
+  <nodes>
+    <node x="349.0" y="33.0">Assignment2.Menu</node>
+    <node x="0.0" y="0.0">Assignment2.Address</node>
+    <node x="212.25" y="513.0">Assignment2.Restaurant</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Assignment2.Restaurant" target="Assignment2.Address" relationship="DEPENDENCY">
+      <point x="-81.0" y="-193.5" />
+      <point x="293.25" y="493.0" />
+      <point x="159.5" y="493.0" />
+      <point x="159.5" y="483.0" />
+      <point x="82.25" y="483.0" />
+      <point x="-82.25" y="226.5" />
+    </edge>
+    <edge source="Assignment2.Restaurant" target="Assignment2.Menu" relationship="TO_ONE">
+      <point x="81.0" y="-193.5" />
+      <point x="455.25" y="493.0" />
+      <point x="565.5" y="493.0" />
+      <point x="565.5" y="473.0" />
+      <point x="666.25" y="473.0" />
+      <point x="105.75" y="193.5" />
+    </edge>
+    <edge source="Assignment2.Restaurant" target="Assignment2.Address" relationship="TO_ONE">
+      <point x="81.0" y="-193.5" />
+      <point x="455.25" y="493.0" />
+      <point x="565.5" y="493.0" />
+      <point x="565.5" y="473.0" />
+      <point x="246.75" y="473.0" />
+      <point x="82.25" y="226.5" />
+    </edge>
+    <edge source="Assignment2.Restaurant" target="Assignment2.Menu" relationship="DEPENDENCY">
+      <point x="-81.0" y="-193.5" />
+      <point x="293.25" y="493.0" />
+      <point x="159.5" y="493.0" />
+      <point x="159.5" y="483.0" />
+      <point x="454.75" y="483.0" />
+      <point x="-105.75" y="193.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4467391304347826" showDependencies="true" x="386.0" y="450.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
