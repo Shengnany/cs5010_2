@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/shengnanyou/IdeaProjects/assignment1/src/main/java/problem1</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">problem1.Deposit</node>
+    <node x="473.0" y="0.0">problem1.CardOwner</node>
+    <node x="258.0" y="66.0">problem1.CardBalance</node>
+    <node x="358.5" y="447.0">problem1.TransitCard</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="problem1.TransitCard" target="problem1.CardOwner" relationship="TO_ONE">
+      <point x="72.5" y="-138.5" />
+      <point x="576.0" y="427.0" />
+      <point x="646.5681818181818" y="427.0" />
+      <point x="646.5681818181818" y="407.0" />
+      <point x="700.25" y="407.0" />
+      <point x="75.75" y="193.5" />
+    </edge>
+    <edge source="problem1.TransitCard" target="problem1.CardOwner" relationship="DEPENDENCY">
+      <point x="-72.5" y="-138.5" />
+      <point x="431.0" y="427.0" />
+      <point x="350.5" y="427.0" />
+      <point x="350.5" y="417.0" />
+      <point x="548.75" y="417.0" />
+      <point x="-75.75" y="193.5" />
+    </edge>
+    <edge source="problem1.TransitCard" target="problem1.CardBalance" relationship="TO_ONE">
+      <point x="72.5" y="-138.5" />
+      <point x="576.0" y="427.0" />
+      <point x="646.5681818181818" y="427.0" />
+      <point x="646.5681818181818" y="407.0" />
+      <point x="404.25" y="407.0" />
+      <point x="48.75" y="127.5" />
+    </edge>
+    <edge source="problem1.TransitCard" target="problem1.CardBalance" relationship="DEPENDENCY">
+      <point x="-72.5" y="-138.5" />
+      <point x="431.0" y="427.0" />
+      <point x="350.5" y="427.0" />
+      <point x="350.5" y="417.0" />
+      <point x="306.75" y="417.0" />
+      <point x="-48.75" y="127.5" />
+    </edge>
+    <edge source="problem1.TransitCard" target="problem1.Deposit" relationship="DEPENDENCY">
+      <point x="-72.5" y="-138.5" />
+      <point x="431.0" y="427.0" />
+      <point x="350.5" y="427.0" />
+      <point x="350.5" y="417.0" />
+      <point x="119.0" y="417.0" />
+      <point x="0.0" y="193.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6814516129032258" showDependencies="true" x="388.0" y="362.0" />
+  <SelectedNodes>
+    <node>problem1.CardOwner</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

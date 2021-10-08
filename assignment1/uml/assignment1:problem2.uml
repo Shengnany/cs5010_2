@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/shengnanyou/IdeaProjects/assignment1/src/main/java/problem2</OriginalElement>
+  <nodes>
+    <node x="1152.0" y="11.0">problem2.Movie</node>
+    <node x="914.0" y="11.0">problem2.Award</node>
+    <node x="706.0" y="0.0">problem2.Genre</node>
+    <node x="467.99999999999994" y="11.0">problem2.Serie</node>
+    <node x="237.99999999999994" y="11.0">problem2.Name</node>
+    <node x="0.0" y="11.0">problem2.Multimedia</node>
+    <node x="535.2738095238094" y="315.0">problem2.Artist</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="problem2.Artist" target="problem2.Award" relationship="TO_MANY">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="968.5" y="285.0" />
+      <point x="-54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Name" relationship="TO_ONE">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="290.49999999999994" y="285.0" />
+      <point x="-52.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Genre" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="847.0" y="275.0" />
+      <point x="47.0" y="127.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Serie" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="631.5" y="275.0" />
+      <point x="54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Genre" relationship="TO_ONE">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="753.0" y="285.0" />
+      <point x="-47.0" y="127.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Name" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="395.49999999999994" y="275.0" />
+      <point x="52.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Multimedia" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="163.5" y="275.0" />
+      <point x="54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Movie" relationship="TO_MANY">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="1206.5" y="285.0" />
+      <point x="-54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Award" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="1077.5" y="275.0" />
+      <point x="54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Serie" relationship="TO_MANY">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="522.5" y="285.0" />
+      <point x="-54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Multimedia" relationship="TO_MANY">
+      <point x="-74.75" y="-281.5" />
+      <point x="610.0238095238094" y="295.0" />
+      <point x="281.36904761904754" y="295.0" />
+      <point x="281.36904761904754" y="285.0" />
+      <point x="54.5" y="285.0" />
+      <point x="-54.5" y="116.5" />
+    </edge>
+    <edge source="problem2.Artist" target="problem2.Movie" relationship="DEPENDENCY">
+      <point x="74.75" y="-281.5" />
+      <point x="759.5238095238094" y="295.0" />
+      <point x="1088.654761904762" y="295.0" />
+      <point x="1088.654761904762" y="275.0" />
+      <point x="1315.5" y="275.0" />
+      <point x="54.5" y="116.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5645879732739421" showDependencies="true" x="685.0" y="439.00000000000006" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
