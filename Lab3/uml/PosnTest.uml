@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Assignment3.PosnTest</OriginalElement>
+  <nodes>
+    <node x="-228.96593673965936" y="-28.42335766423355">Assignment3.PosnTest</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic" zoom="0.6332819722650231" showDependencies="true" x="89.0" y="314.5" />
+  <SelectedNodes>
+    <node>Assignment3.PosnTest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

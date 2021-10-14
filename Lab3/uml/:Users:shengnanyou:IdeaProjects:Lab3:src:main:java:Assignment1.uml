@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/shengnanyou/IdeaProjects/Lab3/src/main/java/Assignment1</OriginalElement>
+  <nodes>
+    <node x="311.4078947368421" y="219.0">Assignment1.Athlete</node>
+    <node x="0.0" y="592.0">Assignment1.BaseballPlayer</node>
+    <node x="503.0" y="592.0">Assignment1.Runner</node>
+    <node x="361.375" y="0.0">Assignment1.Name</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Assignment1.Athlete" target="Assignment1.Name" relationship="DEPENDENCY">
+      <point x="-72.25" y="-160.5" />
+      <point x="383.6578947368421" y="198.0" />
+      <point x="453.875" y="198.0" />
+      <point x="453.875" y="188.0" />
+      <point x="410.125" y="188.0" />
+      <point x="-48.75" y="83.5" />
+    </edge>
+    <edge source="Assignment1.BaseballPlayer" target="Assignment1.Athlete" relationship="GENERALIZATION">
+      <point x="120.75" y="-160.5" />
+      <point x="362.25" y="566.0" />
+      <point x="455.9078947368421" y="566.0" />
+      <point x="0.0" y="160.5" />
+    </edge>
+    <edge source="Assignment1.Runner" target="Assignment1.Athlete" relationship="GENERALIZATION">
+      <point x="-98.0" y="-160.5" />
+      <point x="601.0" y="566.0" />
+      <point x="455.9078947368421" y="566.0" />
+      <point x="0.0" y="160.5" />
+    </edge>
+    <edge source="Assignment1.Athlete" target="Assignment1.Name" relationship="TO_ONE">
+      <point x="72.25" y="-160.5" />
+      <point x="528.1578947368421" y="188.0" />
+      <point x="507.625" y="188.0" />
+      <point x="48.75" y="83.5" />
+    </edge>
+    <edge source="Assignment1.BaseballPlayer" target="Assignment1.Name" relationship="DEPENDENCY">
+      <point x="-120.75" y="-160.5" />
+      <point x="120.75" y="566.0" />
+      <point x="236.5" y="566.0" />
+      <point x="236.5" y="198.0" />
+      <point x="453.875" y="198.0" />
+      <point x="453.875" y="188.0" />
+      <point x="410.125" y="188.0" />
+      <point x="-48.75" y="83.5" />
+    </edge>
+    <edge source="Assignment1.Runner" target="Assignment1.Name" relationship="DEPENDENCY">
+      <point x="98.0" y="-160.5" />
+      <point x="797.0" y="566.0" />
+      <point x="704.0" y="566.0" />
+      <point x="704.0" y="198.0" />
+      <point x="453.875" y="198.0" />
+      <point x="453.875" y="188.0" />
+      <point x="410.125" y="188.0" />
+      <point x="-48.75" y="83.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4201500535905681" showDependencies="true" x="447.5" y="456.49999999999994" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
