@@ -115,4 +115,8 @@ public abstract class Product {
         return Double.compare(product.getPrice(), getPrice()) == 0 && Objects.equals(getManufacturer(), product.getManufacturer()) && getCategory() == product.getCategory() && Objects.equals(getName(), product.getName()) && Objects.equals(getAge(), product.getAge());
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge());
+    }
 }

@@ -2,6 +2,8 @@ package Problem1;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest extends Product {
@@ -42,5 +44,16 @@ class ProductTest extends Product {
     void testCategory() {
         setCategory(category1);
         assertEquals(category1, getCategory());
+    }
+
+    @Test
+    void testHash() {
+        setPrice(price1);
+        setManufacturer(name1);
+        setAge(ALCOHOL_AGE);
+        setCategory(category1);
+        setManufacturer(manufacturer1);
+        int hash = Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge());
+        assertEquals(hash, hashCode());
     }
 }
