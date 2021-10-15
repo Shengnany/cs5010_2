@@ -207,4 +207,17 @@ public class Customer {
     public int hashCode() {
         return Objects.hash(getName(), getAge(), getCart(), inventory);
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", received=" + received +
+                ", outOfStock=" + outOfStock +
+                ", removed=" + removed +
+                ", cart=" + cart +
+                ", inventory=" + inventory +
+                '}';
+    }
 }

@@ -119,4 +119,16 @@ public abstract class Product {
     public int hashCode() {
         return Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge());
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", category=" + category +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", age=" + age +
+                ", ALCOHOL_AGE=" + ALCOHOL_AGE +
+                '}';
+    }
 }

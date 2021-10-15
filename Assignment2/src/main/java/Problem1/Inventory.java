@@ -177,4 +177,13 @@ public class Inventory {
     public int hashCode() {
         return Objects.hash(stockService, groceryStock, houseHoldStock);
     }
+
+    @Override
+    public String toString() {
+        return "Inventory{" +
+                "stockService=" + stockService +
+                ", groceryStock=" + groceryStock +
+                ", houseHoldStock=" + houseHoldStock +
+                '}';
+    }
 }

@@ -103,4 +103,14 @@ public class Receipt {
     public int hashCode() {
         return Objects.hash(getTotal(), getReceived(), getOutOfStock(), getRemoved());
     }
+
+    @Override
+    public String toString() {
+        return "Receipt{" +
+                "total=" + total +
+                ", received=" + received +
+                ", outOfStock=" + outOfStock +
+                ", removed=" + removed +
+                '}';
+    }
 }

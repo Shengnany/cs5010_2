@@ -49,4 +49,11 @@ public class GroceryProduct extends Product {
     public int hashCode() {
         return Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge(), weight);
     }
+
+    @Override
+    public String toString() {
+        return "GroceryProduct{" +
+                "weight=" + weight +
+                '}';
+    }
 }

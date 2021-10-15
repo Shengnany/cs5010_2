@@ -84,4 +84,12 @@ public class StockItem {
     public int hashCode() {
         return Objects.hash(getQuantity(), getProduct());
     }
+
+    @Override
+    public String toString() {
+        return "StockItem{" +
+                "quantity=" + quantity +
+                ", product=" + product +
+                '}';
+    }
 }

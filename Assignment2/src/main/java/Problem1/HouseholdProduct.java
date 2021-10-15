@@ -66,4 +66,11 @@ public class HouseholdProduct extends Product {
     public int hashCode() {
         return Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge(), getUnits());
     }
+
+    @Override
+    public String toString() {
+        return "HouseholdProduct{" +
+                "units=" + units +
+                '}';
+    }
 }

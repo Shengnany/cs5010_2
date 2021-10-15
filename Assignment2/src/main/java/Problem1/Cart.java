@@ -86,4 +86,11 @@ public class Cart {
     public int hashCode() {
         return Objects.hash(getProductList());
     }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "productList=" + productList +
+                '}';
+    }
 }
