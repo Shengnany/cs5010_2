@@ -5,34 +5,39 @@ import java.util.Objects;
 /**
  * This class is a product
  */
-public class Product {
-    private final String manufacturer;
-    private final Category category;
-    private final String name;
+public abstract class Product {
+    private String manufacturer;
+    private Category category;
+    private String name;
     private double price;
     private Integer age;
     private final int ALCOHOL_AGE = 21;
 
     /**
-     * constructor
+     * Sets manufacturer.
      *
-     * @param manufacturer manufacturer
-     * @param category     category
-     * @param name         name
-     * @param price        price
-     * @param age          age
+     * @param manufacturer the manufacturer
      */
-    public Product(String manufacturer, Category category, String name, double price, Integer age) {
+    public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    /**
+     * Sets category.
+     *
+     * @param category the category
+     */
+    public void setCategory(Category category) {
         this.category = category;
+    }
+
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
         this.name = name;
-        this.price = price;
-        if(this.category == Category.BEER){
-            this.age = ALCOHOL_AGE;
-        }
-        else{
-            this.age = age;
-        }
     }
 
     /**
@@ -90,32 +95,24 @@ public class Product {
     }
 
     /**
-     * get the c
+     * Gets category.
      *
-     * @return * get the category
+     * @return the category
      */
     public Category getCategory() {
         return category;
     }
 
-    /**
-     * check if the two object are the same
-     * @param o return the object to be compared
-     * @return true if the same
-     */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product product)) return false;
-        return getManufacturer().equals(product.getManufacturer()) && getCategory() == product.getCategory() && getName().equals(product.getName()) && getPrice() == product.getPrice() && getAge().equals(product.getAge());
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Product)) {
+            return false;
+        }
+        Product product = (Product) o;
+        return Double.compare(product.getPrice(), getPrice()) == 0 && Objects.equals(getManufacturer(), product.getManufacturer()) && getCategory() == product.getCategory() && Objects.equals(getName(), product.getName()) && Objects.equals(getAge(), product.getAge());
     }
 
-    /**
-     * hash the object
-     * @return the hash code
-     */
-    @Override
-    public int hashCode() {
-        return Objects.hash(getManufacturer(), getCategory(), getName(), getPrice(), getAge(), ALCOHOL_AGE);
-    }
 }

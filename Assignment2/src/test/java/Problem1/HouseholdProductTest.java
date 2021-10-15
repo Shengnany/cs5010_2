@@ -31,6 +31,7 @@ class HouseholdProductTest {
     private int units2 = 1;
     private int units3 = 1;
     private int units4 = 1;
+
     @BeforeEach
     void setUp() {
         product1 = new HouseholdProduct(manufacturer1, category1, name1, price1, age1, units1);
@@ -41,22 +42,20 @@ class HouseholdProductTest {
 
     @Test
     void getUnits() {
-        assertEquals(this.units2,product2.getUnits());
-
+        assertEquals(this.units2, product2.getUnits());
     }
 
     @Test
     void testEquals() {
-        assertEquals(product3,product4);
-        assertNotEquals(product1,product2);
-        assertNotEquals(product1,"abc");
-        assertEquals(product1,product1);
+        assertEquals(product3, product4);
+        assertNotEquals(product1, product2);
+        assertNotEquals(product1, "abc");
+        assertEquals(product1, product1);
     }
 
     @Test
     void testHashCode() {
-        int a = Objects.hash(product1.getManufacturer(), product1.getCategory(), product1.getName(), product1.getPrice(), product1.getAge(), age1);
-        int b = Objects.hash(a, product1.getUnits());
-        assertEquals(b,product1.hashCode());
+        int a = Objects.hash(product1.getManufacturer(), product1.getCategory(), product1.getName(), product1.getPrice(), product1.getAge(), product1.getUnits());
+        assertEquals(a, product1.hashCode());
     }
 }

@@ -6,9 +6,9 @@ import java.util.*;
  * This class is for inventory, contains information about stocks and how to update stock
  */
 public class Inventory {
-    private final Map<String,List<StockItem>> stockService = new HashMap<>();
-    private static final String GROCERY =  "Grocery";
-    private static final String HOUSEHOLD =  "Household";
+    private final Map<String, List<StockItem>> stockService = new HashMap<>();
+    private static final String GROCERY = "Grocery";
+    private static final String HOUSEHOLD = "Household";
     /**
      * The Grocery stock.
      */
@@ -24,11 +24,11 @@ public class Inventory {
      * @param groceryStock   the stock for grocery
      * @param householdStock the stock for household
      */
-    public Inventory(List<StockItem> groceryStock,  List<StockItem> householdStock) {
+    public Inventory(List<StockItem> groceryStock, List<StockItem> householdStock) {
         this.groceryStock = groceryStock;
         this.houseHoldStock = householdStock;
-        stockService.put(GROCERY,groceryStock);
-        stockService.put(HOUSEHOLD,householdStock);
+        stockService.put(GROCERY, groceryStock);
+        stockService.put(HOUSEHOLD, householdStock);
     }
 
 
@@ -39,8 +39,8 @@ public class Inventory {
      * @param quantity       the quantity
      * @return the stock item
      */
-    public StockItem addToGroceryStock(GroceryProduct groceryProduct, int quantity){
-        StockItem p = new StockItem(groceryProduct,quantity);
+    public StockItem addToGroceryStock(GroceryProduct groceryProduct, int quantity) {
+        StockItem p = new StockItem(groceryProduct, quantity);
         groceryStock.add(p);
         return p;
     }
@@ -53,8 +53,8 @@ public class Inventory {
      * @param quantity         the quantity
      * @return the stock item
      */
-    public StockItem addToHouseholdStock(HouseholdProduct householdProduct, int quantity){
-        StockItem p = new StockItem(householdProduct,quantity);
+    public StockItem addToHouseholdStock(HouseholdProduct householdProduct, int quantity) {
+        StockItem p = new StockItem(householdProduct, quantity);
         houseHoldStock.add(p);
         return p;
     }
@@ -82,10 +82,10 @@ public class Inventory {
      *
      * @return the retail values of all items in the stock
      */
-    public double getAllRetailValues(){
+    public double getAllRetailValues() {
         double sum = 0;
-        for(List<StockItem> stock: stockService.values()){
-            for(StockItem item: stock){
+        for (List<StockItem> stock : stockService.values()) {
+            for (StockItem item : stock) {
                 sum += item.getQuantity() * item.getProduct().getPrice();
             }
         }
@@ -98,12 +98,13 @@ public class Inventory {
      * @param product the product customer would like to add to cart
      * @return the number of items of a specific product to purchase
      */
-    public int getNumOfProd(Product product){
+    public int getNumOfProd(Product product) {
         List<StockItem> stock = getStock(product);
         int count = 0;
-        for(StockItem item: stock){
-            if(item.getProduct().equals(product))
+        for (StockItem item : stock) {
+            if (item.getProduct().equals(product)) {
                 count += item.getQuantity();
+            }
         }
         return count;
     }
@@ -114,12 +115,11 @@ public class Inventory {
      * @param product the product
      * @return the stock a product belongs to
      */
-    public List<StockItem> getStock(Product product){
+    public List<StockItem> getStock(Product product) {
         List<StockItem> stock;
-        if(product instanceof GroceryProduct){
+        if (product instanceof GroceryProduct) {
             stock = stockService.get(GROCERY);
-        }
-        else {
+        } else {
             stock = stockService.get(HOUSEHOLD);
         }
         return stock;
@@ -131,37 +131,46 @@ public class Inventory {
      * @param item   the item
      * @param amount the amount
      */
-    public void reduce(StockItem item, int amount){
-        try{
+    public void reduce(StockItem item, int amount) {
+        try {
             List<StockItem> stock = getStock(item.getProduct());
-            if(stock.contains(item)) {
-                if(item.isEnough(amount)){
+            if (stock.contains(item)) {
+                if (item.isEnough(amount)) {
                     item.setQuantity(item.getQuantity() - amount);
-                    if(item.getQuantity() == 0) stock.remove(item);
+                    if (item.getQuantity() == 0) {
+                        stock.remove(item);
+                    }
+                } else {
+                    throw new IllegalPurchaseException("Cannot complete the purchase for the amount");
                 }
-                else  throw new IllegalPurchaseException("Cannot complete the purchase for the amount");
+            } else {
+                throw new IllegalPurchaseException("Cannot complete the purchase for the item");
             }
-            else throw new IllegalPurchaseException("Cannot complete the purchase for the item");
-        }
-        catch (IllegalPurchaseException e){
+        } catch (IllegalPurchaseException e) {
             System.out.println(e.getMessage());
         }
     }
 
     /**
      * check if the two object are the same
+     *
      * @param o return the object to be compared
      * @return true if the same
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Inventory inventory)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Inventory inventory)) {
+            return false;
+        }
         return stockService.equals(inventory.stockService) && groceryStock.equals(inventory.groceryStock) && houseHoldStock.equals(inventory.houseHoldStock);
     }
 
     /**
      * hash the object
+     *
      * @return the hash code
      */
     @Override

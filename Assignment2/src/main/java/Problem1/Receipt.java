@@ -9,9 +9,9 @@ import java.util.Objects;
  */
 public class Receipt {
     private final double total;
-    private final Map<Product,Integer> received;
-    private final Map<Product,Integer> outOfStock;
-    private final Map<Product,Integer> removed;
+    private final Map<Product, Integer> received;
+    private final Map<Product, Integer> outOfStock;
+    private final Map<Product, Integer> removed;
 
     /**
      * empty constructor
@@ -19,12 +19,16 @@ public class Receipt {
     public Receipt() {
         this.total = 0;
         this.received = new HashMap<>();
-        this.outOfStock = new HashMap<>();;
-        this.removed = new HashMap<>();;
+        this.outOfStock = new HashMap<>();
+        ;
+        this.removed = new HashMap<>();
+        ;
     }
+
     /**
      * constructor
-     *  @param total      total price
+     *
+     * @param total      total price
      * @param received   actual received product
      * @param outOfStock product cannot be purchased or substituted
      * @param removed    product removed due to age restrictions
@@ -74,19 +78,25 @@ public class Receipt {
 
     /**
      * check if the two object are the same
+     *
      * @param o return the object to be compared
      * @return true if the same
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Receipt)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Receipt)) {
+            return false;
+        }
         Receipt receipt = (Receipt) o;
         return Double.compare(receipt.getTotal(), getTotal()) == 0 && getReceived().equals(receipt.getReceived()) && getOutOfStock().equals(receipt.getOutOfStock()) && getRemoved().equals(receipt.getRemoved());
     }
 
     /**
      * hash the object
+     *
      * @return the hash code
      */
     @Override
